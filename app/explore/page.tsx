@@ -10,7 +10,6 @@ export default function ExplorePage() {
 				<SearchBar />
 				<div className="grid grid-cols-4 gap-4 mt-4">
 					<div className="col-span-1 h-60 bg-secondary-light rounded-lg">
-
 					</div>
 					<div className="col-span-3 bg-primary-light rounded-lg box-border p-4 pt-0">
 						<PostCard 

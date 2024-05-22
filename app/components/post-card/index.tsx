@@ -1,4 +1,6 @@
+import navRoutes from "@/app/config/navigation-routes";
 import Image from "next/image";
+import Link from "next/link";
 
 interface PostCardProps {
 	title: string;
@@ -6,13 +8,14 @@ interface PostCardProps {
 	likes: number;
 	donations: number;
 	submissions: number;
-	// ...
 }
 
 export default function PostCard({ title, description, likes, donations, submissions }: PostCardProps) {
 	return (
 		<div className="bg-background-light p-4 box-border rounded-lg w-full mt-4">
-			<h1 className="text-base font-medium text-primary-light">{title}</h1>
+			<Link href={navRoutes.post.view(1)}>
+				<h1 className="text-base font-medium text-primary-light">{title}</h1>
+			</Link>
 			<p className="text-sm text-primary-light">{description}</p>
 			<div className="flex items-center justify-between mt-2">
 				<div className="flex items-center justify-start gap-3">
@@ -36,8 +39,12 @@ export default function PostCard({ title, description, likes, donations, submiss
 					</button>
 				</div>
 				<div className="flex items-center justify-end gap-4">
-					<p className="font-medium text-secondary-light text-sm">{donations}$ Donated</p>
-					<p className="font-medium text-primary-light text-sm">{submissions} Submissions</p>
+					<Link href={navRoutes.post.view(1)}>
+						<p className="font-medium text-secondary-light text-sm">{donations}$ Donated</p>
+					</Link>
+					<Link href={navRoutes.post.view(1)}>
+						<p className="font-medium text-primary-light text-sm">{submissions} Submissions</p>
+					</Link>
 				</div>
 			</div>
 		</div>

@@ -11,10 +11,11 @@ const config: Config = {
       transparent: "transparent",
       background: {
         light: "#F8F9D7",
-        dark: "#000"
+        dark: "#000",
       },
       primary: {
         light: "#4B0096",
+        soft: "#D9D9D9"
       },
       secondary: {
         light: "#FF4949",

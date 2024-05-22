@@ -18,7 +18,7 @@ export default function HeaderNavigation() {
 					</li>
 					<li>
 						<Image
-							className="inline-block h-10 w-10 rounded-full ring-1 ring-primary-light" 
+							className="inline-block h-10 w-10 rounded-full ring-2 ring-primary-light" 
 							src="/images/male.png"
 							width={100}
 							height={100}

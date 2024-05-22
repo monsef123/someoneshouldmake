@@ -16,6 +16,9 @@ const config: Config = {
       primary: {
         light: "#4B0096",
       },
+      secondary: {
+        light: "#FF4949",
+      },
       border: {
         light: "#4B0096"
       }

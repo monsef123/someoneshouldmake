@@ -12,7 +12,7 @@ interface PostCardProps {
 
 export default function PostCard({ title, description, likes, donations, submissions }: PostCardProps) {
 	return (
-		<div className="bg-background-light p-4 box-border rounded-lg w-full mt-4">
+		<div className="bg-background-light p-4 box-border rounded-xl w-full mt-4">
 			<Link href={navRoutes.post.view(1)}>
 				<h1 className="text-base font-medium text-primary-light">{title}</h1>
 			</Link>

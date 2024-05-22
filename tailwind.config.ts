@@ -8,12 +8,16 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      transparent: "transparent",
       background: {
         light: "#F8F9D7",
         dark: "#000"
       },
       primary: {
         light: "#4B0096",
+      },
+      border: {
+        light: "#4B0096"
       }
     },
     extend: {

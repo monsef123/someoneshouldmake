@@ -2,6 +2,7 @@ import HeaderNavigation from "@/components/header-nav";
 import PostAuthorCard from "../author-card";
 import PostInteractionButtons from "../interaction-buttons";
 import PostHeader from "../post-header";
+import SubmissionItem from "../submission-item";
 
 export default function PostView() {
 	return (
@@ -29,6 +30,9 @@ export default function PostView() {
 								Submit your solution
 							</button>
 							<div className="w-100 my-8 border-b-2 border-dashed border-primary-soft" />
+							<h4 className="font-medium">Submissions:</h4>
+							<SubmissionItem />
+							<SubmissionItem />
 						</div>
 					</div>
 				</div>

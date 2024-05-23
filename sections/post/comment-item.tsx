@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CommentItem() {
 	return (
-		<div className="w-100 rounded-3xl bg-primary-soft p-4 box-border mt-4">
+		<div className="w-100 rounded-3xl bg-primary-soft p-4 box-border mt-6">
 			<div className="flex items-center justify-start gap-3 text-sm font-medium">
 				<ProfileAvatar
 					size="8"

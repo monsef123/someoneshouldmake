@@ -11,7 +11,7 @@ export default function SubmissionItem({
 	title, description, isVerified, likes
 }: SubmissionItemProps) {
 	return (
-		<div className="w-full box-border p-4 border-2 border-primary-light rounded-xl mt-4">
+		<div className="w-full box-border p-4 border-2 border-primary-light rounded-2xl mt-4">
 			<h4 className="font-medium text-md">{title}</h4>
 			<p>
 				{description}

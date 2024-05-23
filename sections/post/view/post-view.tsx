@@ -3,6 +3,7 @@ import PostAuthorCard from "../author-card";
 import PostInteractionButtons from "../interaction-buttons";
 import PostHeader from "../post-header";
 import SubmissionItem from "../submission-item";
+import CommentItem from "../comment-item";
 
 export default function PostView() {
 	return (
@@ -31,8 +32,20 @@ export default function PostView() {
 							</button>
 							<div className="w-100 my-8 border-b-2 border-dashed border-primary-soft" />
 							<h4 className="font-medium">Submissions:</h4>
-							<SubmissionItem />
-							<SubmissionItem />
+							<SubmissionItem
+								title="Try my package: react-native-simple-OTA"
+								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ..."
+								likes={11}
+								isVerified={true}
+							/>
+							<SubmissionItem 
+								title="I made a low size package for this, hope it helps!"
+								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ..."
+								likes={5}
+								isVerified={false}
+							/>
+							<h4 className="font-medium mt-6">Comments:</h4>
+							<CommentItem />
 						</div>
 					</div>
 				</div>

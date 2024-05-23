@@ -1,11 +1,20 @@
 import Image from "next/image";
 
-export default function SubmissionItem() {
+interface SubmissionItemProps {
+	title: string;
+	description: string;
+	likes: number;
+	isVerified: boolean;
+}
+
+export default function SubmissionItem({
+	title, description, isVerified, likes
+}: SubmissionItemProps) {
 	return (
 		<div className="w-full box-border p-4 border-2 border-primary-light rounded-xl mt-4">
-			<h4 className="font-medium text-md">An easier OTA solution for React Native</h4>
+			<h4 className="font-medium text-md">{title}</h4>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ...
+				{description}
 			</p>
 			<div className="flex items-center justify-between gap-2 mt-4">
 				<div className="flex items-center justify-start gap-2">
@@ -15,9 +24,20 @@ export default function SubmissionItem() {
 						height={22}
 						alt=""
 					/>
+					{likes}
 				</div>
 				<div className="flex items-center justify-end gap-2">
-					
+					{isVerified && (
+						<div className="border border-success-dark flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-success-light text-success-dark font-medium text-sm">
+							<Image
+								src="/images/icons/check-badge.svg"
+								width={22}
+								height={22}
+								alt=""
+							/>
+							Verified solution
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

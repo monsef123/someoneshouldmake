@@ -5,6 +5,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     colors: {
@@ -23,10 +24,10 @@ const config: Config = {
       border: {
         light: "#4B0096"
       },
-      // success: {
-      //   light: "#9DDE8B",
-      //   dark: "#006769"
-      // }
+      success: {
+        light: "#9DDE8B",
+        dark: "#006769"
+      }
     },
     extend: {
       backgroundImage: {

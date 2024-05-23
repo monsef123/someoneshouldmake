@@ -1,4 +1,4 @@
-import navRoutes from "@/app/config/navigation-routes";
+import navRoutes from "@/config/navigation-routes";
 import Image from "next/image";
 import Link from "next/link";
 

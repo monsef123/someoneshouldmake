@@ -1,4 +1,4 @@
-import ProfileAvatar from "@/app/components/profile-avatar";
+import ProfileAvatar from "@/components/profile-avatar";
 import Image from "next/image";
 import Link from "next/link";
 

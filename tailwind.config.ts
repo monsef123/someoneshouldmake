@@ -22,7 +22,11 @@ const config: Config = {
       },
       border: {
         light: "#4B0096"
-      }
+      },
+      // success: {
+      //   light: "#9DDE8B",
+      //   dark: "#006769"
+      // }
     },
     extend: {
       backgroundImage: {

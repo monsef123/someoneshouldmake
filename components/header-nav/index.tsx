@@ -23,6 +23,19 @@ export default function HeaderNavigation() {
 					<li>
 						<ProfileAvatar />
 					</li>
+					<li>
+						<button className="w-10 h-10 bg-primary-soft rounded-full flex items-center justify-center relative">
+							<Image
+								src="/images/icons/bell.svg"
+								width={22}
+								height={22}
+								alt=""
+							/>
+							<div 
+								className="w-2 h-2 rounded-full bg-primary-light absolute top-0 right-1"
+							/>
+						</button>
+					</li>
 				</ul>
 			</nav>
 		</header>

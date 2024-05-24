@@ -6,7 +6,7 @@ export default function CommentItem() {
 		<div className="w-100 rounded-3xl bg-primary-soft p-4 box-border mt-6">
 			<div className="flex items-center justify-start gap-3 text-sm font-medium">
 				<ProfileAvatar
-					size="8"
+					size="10"
 				/>
 				Mounsif Meftah
 			</div>
@@ -23,7 +23,7 @@ export default function CommentItem() {
 					/>
 					11
 				</button>
-				<button className="py-1 px-4 border border-primary-light rounded-full">
+				<button className="py-1 px-4 border border-primary-light rounded-full text-xs">
 					Reply
 				</button>
 			</div>

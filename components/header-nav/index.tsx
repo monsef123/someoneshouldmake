@@ -32,6 +32,7 @@ function useUserSession(initialUser: any) {
 
 	useEffect(() => {
 		const unsubscribe = onAuthStateChanged((authUser: any) => {
+			console.log("Auth state changed", authUser);
 			setUser(authUser)
 		})
 

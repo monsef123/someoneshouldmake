@@ -4,6 +4,8 @@ import Image from "next/image";
 import { InputHTMLAttributes } from "react";
 import {
 	signInWithGoogle,
+	signInWithFacebook,
+	signInWithGithub,
 } from "@/lib/firebase/auth";
 
 interface CustomInputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -27,9 +29,19 @@ function CustomInput({
 
 export default function RegisterView() {
 
-	const handleSignIn = (event: any) => {
+	const handleGoogleSignIn = (event: any) => {
 		event.preventDefault();
 		signInWithGoogle();
+	};
+
+	const handleFacebookSignIn = (event: any) => {
+		event.preventDefault();
+		signInWithFacebook();
+	};
+
+	const handleGithubSignIn = (event: any) => {
+		event.preventDefault();
+		signInWithGithub();
 	};
 
 	return (
@@ -57,7 +69,7 @@ export default function RegisterView() {
 					<div
 						className="flex items-center justify-center gap-8"
 					>
-						<button>
+						<button onClick={handleGithubSignIn}>
 							<Image
 								src="/images/icons/github.svg"
 								width={40}
@@ -65,7 +77,7 @@ export default function RegisterView() {
 								alt=""
 							/>
 						</button>
-						<button onClick={handleSignIn}>
+						<button onClick={handleGoogleSignIn}>
 							<Image
 								src="/images/icons/google.svg"
 								width={40}
@@ -73,7 +85,7 @@ export default function RegisterView() {
 								alt=""
 							/>
 						</button>
-						<button>
+						<button onClick={handleFacebookSignIn}>
 							<Image
 								src="/images/icons/facebook.svg"
 								width={40}

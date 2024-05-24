@@ -6,7 +6,6 @@ import Link from "next/link";
 import ProfileAvatar from "../profile-avatar";
 import React, { useState, useEffect } from "react";
 import {
-	signInWithGoogle,
 	signOut,
 	onAuthStateChanged
 } from "@/lib/firebase/auth";
@@ -23,7 +22,6 @@ function useUserSession(initialUser: any) {
 	useEffect(() => {
 		if ("serviceWorker" in navigator) {
 			const serializedFirebaseConfig = encodeURIComponent(JSON.stringify(firebaseConfig));
-			console.log("Firebase config", serializedFirebaseConfig);
 			const serviceWorkerUrl = `/auth-service-worker.js?firebaseConfig=${serializedFirebaseConfig}`
 
 			navigator.serviceWorker
@@ -47,7 +45,7 @@ function useUserSession(initialUser: any) {
 
 			// refresh when user changed to ease testing
 			if (user?.email !== authUser?.email) {
-				router.refresh()
+				router.push(navRoutes.explore.root);
 			}
 		})
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,13 +66,6 @@ export default function HeaderNavigation({ initialUser }: headerNavigationProps)
 		event.preventDefault();
 		signOut();
 	};
-
-	const handleSignIn = (event: any) => {
-		event.preventDefault();
-		signInWithGoogle();
-	};
-
-	console.log(user);
 
 	return (
 		<header className="flex items-center justify-between py-4">
@@ -120,12 +111,22 @@ export default function HeaderNavigation({ initialUser }: headerNavigationProps)
 							</li>
 						</>
 					) : (
-						<button
-							className="py-2 px-4 rounded-full bg-primary-light text-background-light font-medium text-sm"
-							onClick={handleSignIn}
-						>
-							Sign in with Google
-						</button>
+						<li>
+							<div className="flex items-center justify-end gap-4">
+								<Link
+									href="/"
+									className="py-3 px-6 rounded-full bg-transparent text-primary-light border border-primary-light font-medium text-sm"
+								>
+									Login
+								</Link>
+								<Link
+									href={navRoutes.register.root}
+									className="py-3 px-6 rounded-full bg-primary-light text-background-light font-medium text-sm"
+								>
+									Get started!
+								</Link>
+							</div>
+						</li>
 					)}
 
 				</ul>

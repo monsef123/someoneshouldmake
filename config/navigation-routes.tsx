@@ -10,6 +10,9 @@ const navRoutes = {
 		root: "/post",
 		create: "/post/create",
 		view: (id: number) => `/post/${id}`,
+	},
+	register: {
+		root: "/register"
 	}
 }
 

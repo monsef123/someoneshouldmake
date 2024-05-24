@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clashDisplay.className + " bg-background-light text-primary-light"}>
-        <div className="container mx-auto">
+        <div className="container mx-auto h-full">
           {children}
         </div>
       </body>
